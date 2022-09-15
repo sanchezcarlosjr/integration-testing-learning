@@ -17,6 +17,8 @@ dependencies {
     implementation 'com.aventstack:extentreports:5.0.9'
     implementation 'com.assertthat:selenium-shutterbug:1.5'
 
+    testImplementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.29'
+
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
 

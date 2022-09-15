@@ -23,7 +23,7 @@ public final class TestListener implements ITestListener {
   @Override
   public void onTestSuccess(final ITestResult result) {
     ITestNGMethod method = result.getMethod();
-    String testData = result.getParameters()[0].toString();
+    String testData = result.getParameters().length > 0 ? result.getParameters()[0].toString() : "";
 
     ExtentTest test =
         REPORT
@@ -35,7 +35,7 @@ public final class TestListener implements ITestListener {
   @Override
   public void onTestFailure(final ITestResult result) {
     ITestNGMethod method = result.getMethod();
-    String testData = result.getParameters()[0].toString();
+    String testData = result.getParameters().length > 0 ? result.getParameters()[0].toString() : "";
 
     ExtentTest test =
         REPORT

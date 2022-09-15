@@ -44,7 +44,7 @@ public final class DataProviderUtil {
       for (BaseData baseData : routines.iterate(clazz, inputReader)) {
         if (baseData.getTestCaseId().equals(testCaseId)) {
           parsedData.add(
-              new ArrayList<>() {
+              new ArrayList() {
                 {
                   add(baseData);
                 }
